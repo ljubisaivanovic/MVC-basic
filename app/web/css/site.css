@@ -10,3 +10,12 @@ body{
     color: white;
     text-align: center;
 }
+.register input {
+    width: 400px;
+}
+.input-group {
+    width: 400px!important;
+}
+.input-group-addon {
+    width: 150px!important;
+}

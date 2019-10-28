@@ -6,7 +6,7 @@
         <form action="?p=user/login" method="post">
             <h2 class="text-center">Sign in</h2>
             <div class="form-group">
-                <div class="input-group">
+                <div class="input-group text-center">
                     <span class="input-group-addon">Email:</span>
                     <input type="text" class="form-control" name="email" placeholder="Email" required="required">
                 </div>
@@ -17,13 +17,10 @@
                     <input type="password" class="form-control" name="password" placeholder="Password" required="required">
                 </div>
             </div>
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary login-btn btn-block">Sign in</button>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
-            <div class="clearfix">
-                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-                <a href="#" class="pull-right">Forgot Password?</a>
-            </div>
+
         </form>
         <p class="text-center text-muted small">Don't have an account? <a href="?p=user/showRegister">Register</a>
 
