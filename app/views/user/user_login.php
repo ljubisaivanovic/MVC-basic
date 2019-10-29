@@ -3,6 +3,15 @@
 <div class="row ">
     <div class="col-md-4"></div>
     <div class="col-md-4 login">
+        <?php
+        if (!empty($_SESSION['message'])) {
+            echo '<div class="alert alert-success">
+                    <strong>Success!</strong>' . $_SESSION['message'] . '
+                  </div>';
+            unset($_SESSION['message']);
+        }
+
+        ?>
         <form action="?p=user/login" method="post">
             <h2 class="text-center">Sign in</h2>
             <div class="form-group">
@@ -14,7 +23,8 @@
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon">Password:</span>
-                    <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                    <input type="password" class="form-control" name="password" placeholder="Password"
+                           required="required">
                 </div>
             </div>
             <div class="form-group text-center">

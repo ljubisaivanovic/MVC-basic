@@ -19,3 +19,8 @@ body{
 .input-group-addon {
     width: 150px!important;
 }
+ p >.message {
+    width: 300px;
+    color: greenyellow;
+    font-size: 23px;
+}

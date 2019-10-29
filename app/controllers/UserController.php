@@ -41,6 +41,7 @@ class UserController
             if (password_verify($pass, $user->password_hash)) {
                 $_SESSION['user'] = $user->data();
                 var_dump($_SESSION['user']);
+                $_SESSION['message'] = 'Welcome!';
 
                 header("Location: ?p=user/profile", 301);
             } else {
@@ -75,6 +76,7 @@ class UserController
             $user->username = $_POST['username'];
             $user->email = $_POST['email'];
             $user->password_hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
+            $_SESSION['message'] = ' Register success! Please Log In.';
 
             $user->insert();
 
@@ -96,6 +98,7 @@ class UserController
                 $user->password_hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
             }
         }
+        $_SESSION['message'] = 'Update success!';
 
         $user->update();
         header("Location: ?p=user/profile", 301);
