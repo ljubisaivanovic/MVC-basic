@@ -1,5 +1,12 @@
 <?php require_once("views/layouts/header.php"); ?>
-
+<?php
+if (!empty($_SESSION['message'])) {
+    echo '<div class="alert alert-danger">
+                    <strong>Warning!</strong>' . $_SESSION['message'] . '
+                  </div>';
+    unset($_SESSION['message']);
+}
+?>
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4 register">

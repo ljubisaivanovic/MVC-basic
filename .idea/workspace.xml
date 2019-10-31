@@ -4,9 +4,6 @@
     <list default="true" id="b693456a-3077-4c69-a5fb-3dcdf0af6d2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user/user_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user/user_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/user/user_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user/user_profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/web/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/css/site.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +69,7 @@
       <workItem from="1572095443182" duration="4145000" />
       <workItem from="1572184953995" duration="12274000" />
       <workItem from="1572250186943" duration="6803000" />
-      <workItem from="1572276801525" duration="2431000" />
+      <workItem from="1572276801525" duration="7710000" />
     </task>
     <task id="LOCAL-00001" summary="change style">
       <created>1572276296422</created>
@@ -88,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572277593175</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create info message">
+      <created>1572340853974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572340853974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +114,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change style" />
     <MESSAGE value="change style of registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="change style of registration" />
+    <MESSAGE value="create info message" />
+    <option name="LAST_COMMIT_MESSAGE" value="create info message" />
   </component>
 </project>

@@ -17,14 +17,14 @@ class UserController
     public function showRegister()
 
     {
-        require_once ("views/user/user_register.php");
+        require_once("views/user/user_register.php");
     }
 
     public function showUpdate()
     {
         $user = new User();
         $user->find($_SESSION['user']);
-        require_once ("views/user/user_update.php");
+        require_once("views/user/user_update.php");
     }
 
     public function login()
@@ -69,18 +69,28 @@ class UserController
     public function register()
     {
         if ($_POST['password'] == $_POST['password_repeat']) {
-
             $user = new User();
+            try {
+                $emailCheck = $user->get('email', $_POST['email']);
+                var_dump($emailCheck);
+                if (!$emailCheck) {
+                    $user->name = $_POST['name'];
+                    $user->username = $_POST['username'];
+                    $user->email = $_POST['email'];
+                    $user->password_hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
+                    $_SESSION['message'] = ' Register success! Please Log In.';
 
-            $user->name = $_POST['name'];
-            $user->username = $_POST['username'];
-            $user->email = $_POST['email'];
-            $user->password_hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
-            $_SESSION['message'] = ' Register success! Please Log In.';
+                    $user->insert();
+                    header("Location: ?p=user/showLogin", 301);
+                } else {
+                    $_SESSION['message'] = 'This email already used.';
+                    header("Location: ?p=user/showRegister", 301);
+                }
+            } catch (Exception $e) {
 
-            $user->insert();
 
-            header("Location: ?p=user/showLogin", 301);
+            }
+
         }
     }
 
